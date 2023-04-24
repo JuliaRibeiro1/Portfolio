@@ -14,6 +14,8 @@ body,html {
 }
 .flex {
     display: flex;
+    
+   
 }
 .pink {
     color:#F41580
@@ -45,7 +47,7 @@ section {
     color:white;
     width: 95%;
     padding: 1.5em 1em;
-    justify-content: center;
+    
 }
 article {
     height: 100%;
@@ -138,7 +140,7 @@ label div {
     width: 100%;
     height:75vh ;
     max-height: 600px;
-    justify-content: center;
+    
     text-align: center;
     margin: 0 auto;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
@@ -194,11 +196,43 @@ span {
     transform: rotate(360deg);
     transition: .3s ease-in-out;
 }
-.projects div {
+.projects {
+    
+    
+}
+.projects-section {
+    gap:1em;
+    text-align: center;
+    justify-content: center;
+   
+}
+.project {
+    margin-bottom: 1.5em;
+}
+.projects a {
+    display: block;
     width: 50%;
+    margin: 1.5em 0;
+    border-radius: 50%;
+    height: 130px;
+
+    background-image: url(images/color-scheme.png);
+    background-size: cover;
+}
+.projects h3 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+.projects a:before:hover {
+    opacity: 0.5;
+
+    background-image: url(images/free_icon_1\(4\).svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*width: 50%;
     border-radius: 50%;
     height: 150px;
     max-width: 300px;
     background-color: #232838;
-}
 /* <button class="changeModeBtn"><img src="images/moon.svg"></button>
