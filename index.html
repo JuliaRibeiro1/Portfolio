@@ -20,28 +20,41 @@
                 <li>Contatos</li>
             </ul>
     </nav>
-  
-    <button><img src="images/Moon.svg"></button>
-    <input type="checkbox" id="menu_checkbox">
-    <label for="menu_checkbox" class="flex">
-        <div></div>
-        <div></div>
-        <div></div>
-    </label>
+    <div class="end-header-container flex">
+        <input type="checkbox" id="mode-checkbox">
+        <label for="mode-checkbox" class="flex">
+            <img src="images/moon.svg">
+        </label>
+   
+        <div class="showNavbar">
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="flex">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </div>
+    </div>
     </header>
     <main>
         <div class="progress-bar"></div>
         <article>
             <section class="intro-section flex">
-                <div class="intro flex">
+                <div class="intro container flex">
                     <p><span>Olá</span>, meu nome é Julia e eu sou uma desenvolvedora front-end</p>
                     <div class="intro-img"></div>
                     <button class="hireMeBtn">Me contrate</button>
                 </div>
             </section>
-            <section class="projects-section"></section>
+            <section class="projects-section flex">
+                <h2>Projetos</h2>
+                <div class="projects container flex">
+                    
+                </div>
+            </section>
             <section></section>
         </article>
     </main>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
