@@ -122,25 +122,24 @@ label div {
     flex-direction: column;*/
     padding: 1em;
     margin: 1em 0;
-    gap: 2em;
-    
+    gap: 2.5em;
+    margin-top: 2em;
     width: 100%;
   
     position: relative;
 }
 .intro-img {
-    width: 50%;
+    width: 60%;
     background-color: #424242;
     border-radius: 50%;
-    height: 150px;
+    height: 200px;
     border: 4px #8be8fdad solid;
     order: -1;
 }
 .intro-section {
     width: 100%;
-    height:75vh ;
-    max-height: 600px;
     
+    height: 700px;
     text-align: center;
     margin: 0 auto;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
@@ -151,16 +150,18 @@ label div {
     transform: scale(0.5);
     position: absolute;
     top:-50%;
-    left: 10%;
+   
     z-index: -1;
+    animation: blobTopAnimation 2s ease-in forwards;
 }
 .intro:after {
     content: url(images/blobBottom.svg);
     transform: scale(0.7);
     position: absolute;
-    top:25%;
-    left: -60%;
+    top:35%; 
     z-index: -1;
+    animation: blobBottomAnimation 2s ease-in forwards;
+    
 }
 .intro p {
     width: 100%;
@@ -194,13 +195,14 @@ span {
 }
 #mode-checkbox:checked + label img {
     transform: rotate(360deg);
-    transition: .3s ease-in-out;
+    transition: .3s ease-in;
 }
 .projects {
     
     
 }
 .projects-section {
+    width: 100%;
     gap:1em;
     text-align: center;
     justify-content: center;
@@ -208,28 +210,67 @@ span {
 }
 .project {
     margin-bottom: 1.5em;
+    position: relative;
 }
 .projects a {
     display: block;
-    width: 50%;
+    width: 60%;
     margin: 1.5em 0;
     border-radius: 50%;
-    height: 130px;
-
-    background-image: url(images/color-scheme.png);
+    height: 150px;
     background-size: cover;
+    background-position: 50%;
+    
+}
+#project1 a{
+    background-image: url(images/color-scheme.png);
+    
+}
+#project2 a {
+    background-image: url(images/hangman.png);
 }
 .projects h3 {
     font-size: 1rem;
     font-weight: 300;
 }
-.projects a:before:hover {
-    opacity: 0.5;
-
-    background-image: url(images/free_icon_1\(4\).svg);
-    background-repeat: no-repeat;
-    background-position: center;
+.projects a:hover {
+    opacity: 0.4;
 }
+.projects a:hover:before {
+    position: absolute;
+    content: url(images/free_icon_1\(4\).svg);
+    background-repeat: no-repeat;
+    width: 100%;
+   
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+@keyframes blobBottomAnimation {
+    0% {
+        opacity: 0;
+        right: 10%;
+    }
+    100% {
+        opacity: 1;
+        right:0%
+        
+    
+    }
+}
+@keyframes blobTopAnimation {
+    0% {
+        opacity: 0;
+        right: -50%;
+    }
+    100% {
+        opacity: 1;
+        right:-45%
+        
+    
+    }
+}
+
 /*width: 50%;
     border-radius: 50%;
     height: 150px;

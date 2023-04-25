@@ -7,10 +7,11 @@ console.log(get(".projects"))
 function getProjects() {
     let projectsPlaceholder = ""
     data.map(project => {
+        const {name,link,id} = project
        projectsPlaceholder +=
-        `<div class="project flex container">
-            <a href="${project.link}" target="_blank"></a>
-            <h3>${project.name}</h3>
+        `<div class="project flex container" id="project${id}">
+            <a href="${link}" target="_blank"></a>
+            <h3>${name}</h3>
             
         </div>
         `
