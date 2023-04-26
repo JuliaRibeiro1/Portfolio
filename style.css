@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #171B26;
+    background-color: #1f2433;
     width: 100vw;
     height: 100vh;
     font-family: 'IBM Plex Mono', monospace;
@@ -26,9 +26,9 @@ button {
     font-family: 'IBM Plex Mono', monospace;
 }
 header {
-    background-color: #272C3D;
+    background-color: #232838;;
     padding: 1.5em;
-    height: 50px;
+    height:50px;
     font-size: 0.9rem;
     align-items: center;
     justify-content:  space-between;
@@ -117,9 +117,6 @@ label div {
     
 }
 .intro {
-
-   /* align-items: center;
-    flex-direction: column;*/
     padding: 1em;
     margin: 1em 0;
     gap: 2.5em;
@@ -133,6 +130,7 @@ label div {
     background-color: #424242;
     border-radius: 50%;
     height: 200px;
+    max-width: 400px;
     border: 4px #8be8fdad solid;
     order: -1;
 }
@@ -222,13 +220,7 @@ span {
     background-position: 50%;
     
 }
-#project1 a{
-    background-image: url(images/color-scheme.png);
-    
-}
-#project2 a {
-    background-image: url(images/hangman.png);
-}
+
 .projects h3 {
     font-size: 1rem;
     font-weight: 300;
@@ -270,7 +262,94 @@ span {
     
     }
 }
+@media (min-width:600px) {
+    header {
+        height: 60px;
+        
+    }
+    .intro-section {
+        height: 1000px;
+    }
+ 
+   .intro {
+      display: grid;
+      justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+     margin: auto 0;
+     grid-template-columns: repeat(2,30%);
+     grid-template-rows: 400px 200px;
+     grid-auto-flow: dense;
+    direction: rtl;
+    width: 100%;
+    text-align: center;
+    
+ 
+   }
+  
+   .intro button {
+    width: 50%;
+    font-size: 1.2rem;
+    margin-top: 0;
+    grid-column: 2;
+    align-self: start;
+    justify-self: center;
 
+   
+   }
+   
+   .intro p {
+    font-size: 2rem;
+    width:100%;
+   }
+   .intro-img {
+    height: 400px;
+    width: 100%;
+    justify-self: center;
+   }
+    span {
+        font-size: 3.5rem;
+    }
+    .intro:before {
+        transform: scale(2);
+        top:-20%;
+        left:20%;
+     
+    }
+    .intro:after {
+        content: url(images/Vector\(1\).svg);
+        transform: scale(2);
+        top:55%; 
+        left:-65%;
+        
+    }
+    .projects{
+        flex-direction: row;
+    }
+    nav {
+        order: 3;
+        display: inline;
+        font-size: 1.2rem;
+        
+       
+    }
+    ul {
+        display: flex;
+        gap:2em;
+        justify-content: end;
+        
+       
+    }
+    li {
+        
+    }
+    .end-header-container {
+        order:2
+    }
+    .showNavbar {
+        display: none;
+    }
+}
 /*width: 50%;
     border-radius: 50%;
     height: 150px;
