@@ -111,7 +111,7 @@ label div {
     transform: rotateZ(45deg);
 }
 
-  #menu-checkbox:checked + label div:nth-child(2) {
+#menu-checkbox:checked + label div:nth-child(2) {
     width: 20px;
     top: -1px;
     transform: rotateZ(-45deg);
@@ -180,7 +180,7 @@ label div {
 
 .social-medias-container {
     display: flex;
-    gap:1em;
+    gap:.5em;
 
 }
 .social-medias-container img {
@@ -213,13 +213,6 @@ span {
     transition: .3s ease-in;
 }
 
-.projects-section {
-    width: 100%;
-    gap:1em;
-    text-align: center;
-    justify-content: center;
-   
-}
 .project {
     margin-bottom: 1.5em;
     position: relative;
@@ -249,11 +242,55 @@ span {
     background-repeat: no-repeat;
     width: 100%;
     left: 50%;
+    text-align: center;
     top:50%;
     transform: translate(-50%,-50%);
 }
 .contact-section {
+    text-align: center;
+
+}
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.contact-section h3 {
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 1em;
+
+}
+.contact-section ul {
+  display: flex;
+  justify-content: center;
+   gap:2em
+  
+   
+}
+
+.contact-section li div {
+    background-color: #2e3447;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+   
+}
+
+.contact-section img {
+    width: 30px;
+
+}
+.contact-section h2 {
+    margin-bottom: 1em;
+}
+a {
+    text-decoration: none;
+    color:white;
 }
 footer {
     width:100vw;
@@ -265,22 +302,18 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 0.8em;
-    padding: 1em;
+    padding: 2em;
 }
 .footer-container {
     width: 90%;
     z-index: 100;
     top:100%;
-    
     position: absolute;
     margin-bottom: 2em;
 }
 
 footer h4{
    margin-bottom: 1.5em;
-}
-footer p {
-  
 }
 
 footer::before {
@@ -293,6 +326,7 @@ footer::before {
     background-position: center;
     position: absolute;
     height: 100%;
+  padding: .5em;
     
 }
 
@@ -339,6 +373,12 @@ footer::before {
         width: 100%;
     }
  
+    .projects a {
+        width: 250px;
+        height: 250px; 
+        
+    }
+
    .intro {
     display: grid;
     width: 80%;
@@ -354,7 +394,7 @@ footer::before {
   
   }
   .social-medias-container img {
-    width: 20px;
+    width: 40%;
   }
    .intro button {
     font-size: 1.5rem;
@@ -377,10 +417,14 @@ footer::before {
         transform: scale(2);
      
     }
+ 
+  
+    .projects {
+       width: 85%;
+        display: flex;
+        justify-content: space-between;
+        
 
-    .projects a {
-        width: 300px;
-        height: 300px;
     }
     nav {
         order: 2;
@@ -417,4 +461,9 @@ footer::before {
     footer::before {
         background-image: url(images/Group\ 3\(5\).svg);
     }
+    footer {
+        font-size: 1.1rem;
+    }
+    
+    
 }
