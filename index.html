@@ -8,15 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Portfólio | Julia Ribeiro</title>
 </head>
 <body>
     <header class="header flex">
         <h3 class="pink">Julia Ribeiro</h3>
         <nav>
             <ul class="nav-list flex">
-                <li>Home</li>
-                <li>Projetos</li>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#projects">Projetos</a></li>
                 <li>Contatos</li>
             </ul>
     </nav>
@@ -26,6 +26,8 @@
             <img src="images/moon.svg">
         </label>
    
+
+
         <div class="showNavbar">
             <input type="checkbox" id="menu-checkbox">
             <label for="menu-checkbox" class="flex">
@@ -39,11 +41,12 @@
     <main>
         <div class="progress-bar"></div>
         <article>
-            <section class="intro-section flex">
+          
+            <section class="intro-section flex" id="intro">
                 <div class="intro container flex ">
                     <p><span>Olá</span>, meu nome é Julia e eu sou uma desenvolvedora front-end</p>
                   
-                        <img class="intro-img" src="images/WhatsApp Image 2023-04-28 at 11.02.59 AM (2).jpg">
+                        <img class="intro-img" src="images/WhatsApp Image 2023-04-28 at 11.02.59 AM (3).jpg">
                    
                     <div class="social-medias-container">
                         <a><img src="images/linkedin.svg"></a>
@@ -52,15 +55,24 @@
                     <button class="hireMeBtn">Me contrate</button>
                 </div>
             </section>
-            <section class="projects-section container flex">
+            <section class="projects-section container flex" id="projects">
                 <h2>Projetos</h2>
                 <div class="projects">
-                   
+                    
                 </div>
             </section>
-            <section></section>
+            <section class="contact-section flex ">
+                <a href = "mailto:hijulia259@gmail.com"></a>
+                <h2>Vamos conversar!</h2>
+            </section>
         </article>
+       
     </main>
+    <footer>
+        <div class="footer-container">
+        <h4>© 2023 Julia Ribeiro All Rights Reserved</h4>
+        </div>
+    </footer>
     <script src="index.js" type="module"></script>
 </body>
 </html>

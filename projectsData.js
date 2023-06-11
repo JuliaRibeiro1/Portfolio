@@ -10,7 +10,11 @@
         image: "images/hangman.png"
 
     },
-        
+    {
+        name:"Oldagram",
+        link:"https://github.com/JuliaRibeiro1/Scrimba-projects/tree/main/Oldagram",
+        image:"images/oldagram.png"
+    }
     
 ]
 export default data
