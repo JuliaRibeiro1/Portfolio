@@ -19,7 +19,6 @@ body,html {
 }
 .flex {
     display: flex;
-    
    
 }
 .pink {
@@ -59,10 +58,7 @@ section {
 article {
     height: 100%;
 }
-a {
-    text-decoration: none;
-    color:white
-}
+
 p {
     line-height: 1.5em;
     font-weight: 300;
@@ -85,7 +81,6 @@ main {
     z-index: 2;
     width: 100%;
     top:50px;
-   
     position: fixed;
 }
 #menu-checkbox,#mode-checkbox {
@@ -151,12 +146,10 @@ label div {
     order: -1;
 }
 .intro-section {
-    width: 100%;
-  
-    height: 750px;
+    height: 820px;
     text-align: center;
     margin: 0 auto;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     background-color: #232838;
 }
 .intro-section:before {
@@ -174,30 +167,26 @@ label div {
     transform: scale(90vw);
     position: absolute;
     top:20%;
-    left:-50%;
+    left:-65%;
     right: 0%;
     z-index: -1;
     animation: blobBottomAnimation 2s ease-in ;
-    
 }
 .intro p {
     width: 60%;
     font-size: 1.2rem;
-    justify-self: center;
     
 }
-.social-medias-container img {
-    width: 40px;
- 
-}
+
 .social-medias-container {
     display: flex;
-    gap:.5em;;
+    gap:1em;
 
 }
-.github-icon {
-    height: 32px;
-}
+.social-medias-container img {
+    width: 45px;
+  }
+
 span {
     font-size: 1.5rem;
     color: #BD93F9
@@ -207,10 +196,12 @@ span {
     padding: 1em 1.5em;
     border-radius: 2em;
     background-color:  #BD93F9;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1em;
     margin-bottom: 1em;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.158);
-    color:rgb(0, 0, 0);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
+    color:rgb(0, 0, 0)
+
 }
 .hireMeBtn:hover {
     transform: translateY(-10px);
@@ -271,33 +262,40 @@ footer {
     color:white;
     text-align: center;
     display: flex;
+    justify-content: center;
     align-items: center;
+    font-size: 0.8em;
+    padding: 1em;
 }
 .footer-container {
-    width: 100%;
+    width: 90%;
     z-index: 100;
     top:100%;
+    
     position: absolute;
-
+    margin-bottom: 2em;
 }
 
-
-footer {
-    margin-bottom: -10px;
+footer h4{
+   margin-bottom: 1.5em;
 }
+footer p {
+  
+}
+
 footer::before {
     content: "";
     background-image: url(images/Group\ 3\(4\).svg);
     width: 50%;
     left: 0%;
     top:50%;
-    width: 100%;
-    transform: scale(1);
+    width: 100vw;
+    background-position: center;
     position: absolute;
     height: 100%;
     
-
 }
+
 @keyframes blobBottomAnimation {
     0% {
         opacity: 0;
@@ -305,9 +303,6 @@ footer::before {
     }
     100% {
         opacity: 1;
-       
-        
-    
     }
 }
 @keyframes blobTopAnimation {
@@ -317,9 +312,6 @@ footer::before {
     }
     100% {
         opacity: 1;
-        
-        
-    
     }
 }
 @keyframes animateProject  {
@@ -334,49 +326,42 @@ footer::before {
     header {
         height: 60px;
         width: 100%;
-        
     }
     .intro-section {
-      
         height: 1000px;
         justify-content: center;
         align-items: center;
 
     }
     .intro p {
-        font-size: 1.5rem;
+        font-size: 2rem;
         max-width: 600px;
         width: 100%;
-       
     }
  
    .intro {
     display: grid;
-   width: 80%;
+    width: 80%;
     justify-content: space-evenly;
-
     grid-template-columns: 25% 50% ;
-   
     grid-auto-flow: dense;
-   direction: rtl;
- 
+    direction: rtl;
    }
-  .social-medias-container {
-   
-    position: relative;
-    left:-65%;
-    grid-column-end: -1;
-    grid-column-start: 1;
+
+   .social-medias-container {
+    justify-self: center;
+    grid-column: 2;
+  
+  }
+  .social-medias-container img {
+    width: 20px;
   }
    .intro button {
-    width: 50%;
-    min-width: 200px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 0;
     grid-column: 2;
     align-self: start;
     justify-self: center;
-
    }
    
    .intro-img {
@@ -388,15 +373,9 @@ footer::before {
     span {
         font-size: 3.5rem;
     }
-    .intro-section:before {
+    .intro-section:before, .intro-section:after {
         transform: scale(2);
-        top:0%;
      
-    }
-    .intro-section:after {
-        content: url(images/Vector\(1\).svg);
-        transform: scale(1.5);
-       
     }
 
     .projects a {
@@ -416,22 +395,18 @@ footer::before {
         display: flex;
         gap:2em;
         width: 100%;
-        justify-self: end;
-        justify-content: end;
-        gap:20%
+        justify-content: space-evenly;
 
     }
     .projects-section h2,.contact-section h2 {
         font-size: 3rem;
     }
-    
     .projects h3 {
         font-size:1.5rem;
     }
     .end-header-container {
         order:3;
         margin-right: 5%;
- 
     }
     .showNavbar {
         display: none;
@@ -439,34 +414,7 @@ footer::before {
     .progress-bar {
         top:60px
     }
-}
-@media (min-width:1200px) {
-    .intro {
-        
-    }
-    .projects {
-        display: flex;
-        width: 80%;
-        margin-top: 1em;
-        justify-content: space-evenly;
-
-    }
-    .intro-img {
-        height: 400px;
-        width: 400px;
-        justify-self: center;
-        
-    }
-    .intro p {
-        font-size: 1.8rem;
-    }
-    .intro {
-        justify-content: space-around;
+    footer::before {
+        background-image: url(images/Group\ 3\(5\).svg);
     }
 }
-/*width: 50%;
-    border-radius: 50%;
-    height: 150px;
-    max-width: 300px;
-    background-color: #232838;
-/* <button class="changeModeBtn"><img src="images/moon.svg"></button>
