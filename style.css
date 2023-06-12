@@ -136,14 +136,41 @@ label div {
     max-width: 1100px;
     position: relative;
 }
+
+  
 .intro-img {
-    width: 220px;
-    background-color: #424242;
+  
+   /* background-color: #424242;
     border-radius: 50%;
-    height: 220px;
-    max-width: 400px;
-    border: 4px #8be8fdad solid;
+   
+    border: 4px #8be8fdad solid;;*/
     order: -1;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    background: url('../images/sunset.jpg');
+    background-size: cover;
+    
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    animation: blob 3.7s linear infinite;
+}
+@keyframes blob {
+    0%, 100% {
+        border-radius:
+            42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+
+    33% {
+        border-radius:
+            42% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+
+    66% {
+        border-radius:
+            100% 56% 56% 100% / 100% 100% 56% 56%;
+    }
 }
 .intro-section {
     height: 820px;
@@ -152,55 +179,39 @@ label div {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     background-color: #232838;
 }
-.intro-section:before {
-    content: url(images/blobTop.svg);
-    transform: scale(0.7);
-    position: absolute;
-    top:-5%;
-    left:0%;
-    right: -55%;
-    z-index: -1;
-    animation: blobTopAnimation 2s ease-in forwards;
-}
-.intro-section:after {
-    content: url(images/blobBottom.svg);
-    transform: scale(90vw);
-    position: absolute;
-    top:20%;
-    left:-65%;
-    right: 0%;
-    z-index: -1;
-    animation: blobBottomAnimation 2s ease-in ;
-}
+
 .intro p {
     width: 60%;
+    max-width: 600px;
     font-size: 1.2rem;
     
 }
 
 .social-medias-container {
     display: flex;
-    gap:.5em;
+    width: 25%;
+    justify-content: space-evenly;
 
 }
 .social-medias-container img {
-    width: 45px;
+    width: 100%;
+    max-width: 50px;
   }
 
 span {
     font-size: 1.5rem;
-    color: #BD93F9
+    
 }
 
 .hireMeBtn {
     padding: 1em 1.5em;
     border-radius: 2em;
-    background-color:  #BD93F9;
+    background-color: #F41580;
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 1em;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
-    color:rgb(0, 0, 0)
+    color:rgb(255, 255, 255)
 
 }
 .hireMeBtn:hover {
@@ -212,26 +223,29 @@ span {
     transform: rotate(360deg);
     transition: .3s ease-in;
 }
-
+.projects {
+   display: flex;
+   flex-direction: column;
+}
 .project {
-    margin-bottom: 1.5em;
+  
+    margin-bottom: 1em;
     position: relative;
     animation: animateProject 2s ease-in-out;
 }
 .projects a {
-    display: block;
     width: 60%;
     margin: 1.5em 0;
     border-radius: 50%;
     height: 150px;
     background-size: cover;
     background-position: 50%;
-    position: relative;
+   
 }
 
 .projects h3 {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 500;
 }
 .projects a:hover {
     opacity: 0.4;
@@ -248,11 +262,14 @@ span {
 }
 .contact-section {
     text-align: center;
-
+    background-color: #242a3b;
+   
 }
-.contact {
+
+.contact,.contact-section ul {
     display: flex;
     justify-content: space-evenly;
+  
    
 }
 .contact-section h3 {
@@ -263,11 +280,10 @@ span {
 
 }
 .contact-section ul {
-  display: flex;
-  justify-content: center;
-   gap:2em
-  
-   
+   width: 90%;
+   max-width: 500px;
+   margin-top: 1em;
+
 }
 
 .contact-section li div {
@@ -295,7 +311,7 @@ a {
 footer {
     width:100vw;
     position:relative;
-    height:150px;
+    height:100px;
     color:white;
     text-align: center;
     display: flex;
@@ -303,13 +319,16 @@ footer {
     align-items: center;
     font-size: 0.8em;
     padding: 2em;
+    background-color: #242a3b;
+   
 }
 .footer-container {
     width: 90%;
     z-index: 100;
     top:100%;
+   
     position: absolute;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 footer h4{
@@ -318,15 +337,15 @@ footer h4{
 
 footer::before {
     content: "";
-    background-image: url(images/Group\ 3\(4\).svg);
+    background-image: url(images/Group\ 3\(15\).svg);
     width: 50%;
     left: 0%;
-    top:50%;
+    top:90%;
     width: 100vw;
     background-position: center;
     position: absolute;
     height: 100%;
-  padding: .5em;
+    padding: .5em;
     
 }
 
@@ -369,7 +388,6 @@ footer::before {
     }
     .intro p {
         font-size: 2rem;
-        max-width: 600px;
         width: 100%;
     }
  
@@ -393,43 +411,37 @@ footer::before {
     grid-column: 2;
   
   }
-  .social-medias-container img {
-    width: 40%;
-  }
+
    .intro button {
     font-size: 1.5rem;
-    margin-top: 0;
     grid-column: 2;
     align-self: start;
     justify-self: center;
    }
    
    .intro-img {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     justify-self: center;
     
    }
     span {
         font-size: 3.5rem;
     }
-    .intro-section:before, .intro-section:after {
-        transform: scale(2);
-     
-    }
  
-  
     .projects {
-       width: 85%;
-        display: flex;
-        justify-content: space-between;
-        
-
-    }
+        width: 85%;
+        margin: 50px 0;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-evenly;
+         
+ 
+     }
     nav {
         order: 2;
         display: flex;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         width: 50%;
         min-width: 500px;
         background-color: #F41580;
@@ -443,10 +455,11 @@ footer::before {
 
     }
     .projects-section h2,.contact-section h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
+   
     .projects h3 {
-        font-size:1.5rem;
+        font-size:1rem;
     }
     .end-header-container {
         order:3;
@@ -459,7 +472,7 @@ footer::before {
         top:60px
     }
     footer::before {
-        background-image: url(images/Group\ 3\(5\).svg);
+        background-image: url(images/Group\ 3\(13\).svg);
     }
     footer {
         font-size: 1.1rem;
