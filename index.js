@@ -1,9 +1,8 @@
 import data from "./projectsData.js"
 
-console.log(data)
 const get = element => document.querySelector(element)
 get(".projects").innerHTML = getProjectsHtml()
-console.log(get(".projects"))
+
 function getProjectsHtml() {
     let projectsPlaceholder = ""
     data.map(project => {
@@ -16,8 +15,16 @@ function getProjectsHtml() {
         </div>
         `
     })
-    console.log(projectsPlaceholder)
+
     return projectsPlaceholder
 }
 
+get("#mode-checkbox").addEventListener("change",() => {
+    get(".intro-section").classList.toggle("section-dark-mode")
+    get("body").classList.toggle("body-dark-mode")
+    get(".contact-section").classList.toggle("section-dark-mode")
+  
+})
+
+get("")
 

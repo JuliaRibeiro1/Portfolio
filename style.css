@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    text-decoration: none;
+   /* color:white;*/
+    
+}
+button,a {
+    color:white
 }
 html {
     scroll-behavior: smooth;
@@ -11,6 +17,8 @@ body {
     background-color:  #1f2433;
     width: 100vw;
     font-family: 'IBM Plex Mono', monospace;
+    color:white;
+  
 
 }
 body,html {
@@ -31,14 +39,14 @@ button {
     font-family: 'IBM Plex Mono', monospace;
 }
 header {
-    background-color: #232838;;
+    background-color: #232838;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.226);
     padding: 2em;
     height:3%;
     width: 100%;
     font-size: 0.9rem;
     align-items: center;
     justify-content:  space-between;
-    color:white;
     z-index: 3;
     position: fixed;
 }
@@ -50,7 +58,6 @@ header h3 {
     font-weight: 200;
 }
 section {
-    color:white;
     width: 100%;
     padding: 1.5em 1em; 
 }
@@ -72,15 +79,23 @@ main {
 .progress-bar {
     height: .5em;
     background-color: #6a9af1;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.247);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.411);
     z-index: 2;
-    width: 100%;
+    width: 33%;
     top:60px;
     position: fixed;
 }
 #menu-checkbox,#mode-checkbox {
     display: none;
   }
+  #mode-checkbox {
+    content: url(images/icons8-sun-48.png);
+    display: block;
+    width: 35px;
+    -webkit-appearance: none;
+      
+  }
+
 label {
     flex-direction: column;
     gap: .3em;
@@ -91,6 +106,16 @@ label div {
     background-color: rgb(255, 255, 255);
     height: 2px;
     transition: .2s ease-in
+}
+
+.section-dark-mode {
+    background-color:#e4e5f1 !important;
+    
+}
+
+.body-dark-mode {
+    background-color: #cfd1e4!important;
+    color:#242a3b
 }
 
 #menu-checkbox:checked + label div:first-child {
@@ -121,20 +146,20 @@ label div {
     gap: 2.5em;
     margin-top: 4.5em;
     width: 100%;
-    min-width: 200px;
+    min-width: 100px;
     position: relative;
 }
 
 .intro-img {
+   
     order: -1;
     width: 200px;
-    height: 200px;
     overflow: hidden;
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
     background: url('../images/sunset.jpg');
     background-size: cover;
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
-    animation: blob 5s linear infinite;
+    animation: blob 10s linear infinite;
 }
 @keyframes blob {
     0%, 100% {
@@ -160,9 +185,9 @@ label div {
 }
 
 .intro p {
-    width: 90%;
+    width: 80%;
     font-size: 1.2rem;
-    max-width: 500px;
+   
 }
 
 .social-medias-container {
@@ -188,7 +213,6 @@ span {
     font-size: 1em;
     margin-bottom: 1em;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
-    color:rgb(255, 255, 255)
 
 }
 .hireMeBtn:hover {
@@ -196,9 +220,17 @@ span {
     box-shadow: inset 5px 5px 5px rgba(255, 255, 255, 0.411);
 }
 
-#mode-checkbox:checked + label img {
-    transform: rotate(360deg);
-    transition: .3s ease-in;
+#mode-checkbox:checked {
+    animation: spin .5s ease-out ;
+    content: url(images/icons8-moon-48.png);
+   
+  
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        transition: .3s ease-in;
+    }
 }
 .projects {
    display: flex;
@@ -214,7 +246,6 @@ span {
     margin: 1.5em 0;
     border-radius: 50%;
     height: 150px;
-   
     background-size: cover;
     background-position: 50%;
    
@@ -237,9 +268,12 @@ span {
 }
 .contact-section {
     background-color: #242a3b;
-    padding: 3% 0;
    
 }
+.contact-section,.projects-section {
+    padding: 6% 0;
+}
+
 .contact,.contact-section ul {
     display: flex;
     justify-content: space-evenly;
@@ -274,23 +308,18 @@ span {
 
 .contact-section img {
     width: 30px;
-
+    height: 30px;
 }
 
-a {
-    text-decoration: none;
-    color:white;
-}
+
 footer {
-    color:white;
     font-size: 0.8em;
     padding: 2em;
 }
-
 footer h4{
-   margin-bottom: 1.5em;
-}
-
+    margin-bottom: 1.5em;
+ }
+ 
 @media (min-width:900px) {
     .intro-section {
         height: 1000px;
@@ -300,38 +329,37 @@ footer h4{
     }
 
     .intro p {
-        font-size: 2rem;
         justify-self: center;
+        font-size: 1.7em;
     }
 
    .intro {
-    display: grid;
-    width: 100%;
-    max-width: 1300px;
-    justify-content: space-evenly;
-    grid-template-columns: 25% 50%;
-    grid-template-rows: 150px;
-    grid-auto-flow: dense;
-    direction: rtl;
+        display: grid;
+        width: 100%;
+        max-width: 1300px;
+        justify-content: space-evenly;
+        grid-template-columns: 25% 50%;
+        grid-template-rows: 200px;
+        grid-auto-flow: dense;
+        direction: rtl;
    }
 
    .social-medias-container {
-    justify-self: center;
-    grid-column: 2;
-  
+        justify-self: center;
+        grid-column: 2;
   }
 
    .intro button {
-    font-size: 1.5rem;
-    grid-column: 2;
-    align-self: start;
-    justify-self: center;
-    margin-top: 1em;
+        font-size: 1.5rem;
+        grid-column: 2;
+        align-self: start;
+        justify-self: center;
+        margin-top: 1em;
    }
    
    .intro-img {
-    height: 400px;
-    width: 400px;
+    width: 100%;
+
     justify-self: center;
     
    }
@@ -340,41 +368,53 @@ footer h4{
     height: 220px;
    }
 
-    .projects {
-        width: 95%;
-        margin: 50px 0;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-evenly;
+.projects {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
      }
-    nav {
-        order: 2;
-        display: flex;
-        font-size: 1.3rem;
-        width: 50%;
-        min-width: 500px;
+nav {
+    order: 2;
+    display: flex;
+    font-size: 1.3rem;
+    width: 50%;
+    min-width: 500px;
+
+}
+ul {
+    display: flex;
+    gap:2em;
+    width: 100%;
+    justify-content: space-evenly;
 
     }
-    ul {
-        display: flex;
-        gap:2em;
+.projects-section h2,.contact-section h2 {
+    font-size: 2.5rem;
+    }
+.end-header-container {
+    order:3;
+    margin-right: 5%;
+}
+.showNavbar {
+    display: none;
+}
+.projects h3 {
+    font-size:1.1rem;
+    }
+#mode-checkbox {
+    width: 50px;
+}
+
+}
+@media (min-width:1500px) { 
+    .intro img {
+        width: 400px;
+        
+    }
+    .intro p {
+        font-size: 2em;
         width: 100%;
-        justify-content: space-evenly;
-
     }
-    .projects-section h2,.contact-section h2 {
-        font-size: 2.5rem;
-    }
-    .end-header-container {
-        order:3;
-        margin-right: 5%;
-    }
-    .showNavbar {
-        display: none;
-    }
-    .projects h3 {
-        font-size:1.1rem;
-    }
-
 }
