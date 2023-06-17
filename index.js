@@ -26,10 +26,13 @@ get("#mode-checkbox").addEventListener("change",() => {
   
 })
 
-console.log(window.screenY)
 
 window.onscroll = function(e) {
-    console.log(document.documentElement.clientHeight)
     let heigth = document.documentElement.scrollHeight - document.documentElement.clientHeight
     get(".progress-bar").style.width =  `${(window.scrollY * 100) / heigth }%`
 }
+
+get("#menu-checkbox").addEventListener("change",() => {
+   get("nav").classList.toggle("show")
+ 
+})

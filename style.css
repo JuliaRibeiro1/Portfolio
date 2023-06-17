@@ -8,7 +8,7 @@
     
 }
 button,a {
-    color:white
+    color:rgb(192, 113, 113)
 }
 html {
     scroll-behavior: smooth;
@@ -49,6 +49,7 @@ header {
     justify-content:  space-between;
     z-index: 3;
     position: fixed;
+    
 }
 .end-header-container {
     align-items: center;
@@ -73,27 +74,46 @@ ul {
 nav{
     display: none;
 }
+.show {
+   display: flex;
+   position: absolute;
+   top:110%;
+   left:0%;
+ 
+
+}
+.show ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #232838;
+    width: 100vw;
+}
+.show ul li {
+    box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.116);
+    padding: 1em 0;
+    margin-bottom: 1em;
+}
 main {
     position: relative;
 }
 .progress-bar {
     height: .5em;
     background-color: #6a9af1;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.411);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
     z-index: 2;
-    top:60px;
+    top:55px;
     position: fixed;
 }
 #menu-checkbox,#mode-checkbox {
     display: none;
   }
-  #mode-checkbox {
+
+#mode-checkbox {
     content: url(images/icons8-sun-48.png);
     display: block;
     width: 35px;
-    -webkit-appearance: none;
-      
-  }
+    -webkit-appearance: none; 
+}
 
 label {
     flex-direction: column;
@@ -108,12 +128,12 @@ label div {
 }
 
 .section-dark-mode {
-    background-color:#e4e5f1 !important;
+    background-color:#96a3c0 !important;
     
 }
 
 .body-dark-mode {
-    background-color: #cfd1e4!important;
+    background-color:#9da9c2 !important;
     color:#242a3b
 }
 
@@ -258,7 +278,7 @@ span {
 }
 .projects a:hover:before {
     position: absolute;
-    content: url(images/free_icon_1\(4\).svg);
+    content: url(images/chain.svg);
     background-repeat: no-repeat;
     width: 100%;
     left: 50%;
@@ -348,7 +368,7 @@ footer h4{
         grid-column: 2;
   }
 
-   .intro button {
+   .hireMeBtn {
         font-size: 1.5rem;
         grid-column: 2;
         align-self: start;
@@ -366,46 +386,51 @@ footer h4{
     width: 220px;
     height: 220px;
    }
+   .progress-bar {
+    height: 13px;
+   }
 
-.projects {
+   .projects {
     width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 
      }
-nav {
+    nav {
     order: 2;
     display: flex;
     font-size: 1.3rem;
     width: 50%;
     min-width: 500px;
 
-}
-ul {
+    }
+    ul {
     display: flex;
     gap:2em;
     width: 100%;
     justify-content: space-evenly;
 
     }
-.projects-section h2,.contact-section h2 {
+    .projects-section h2,.contact-section h2 {
     font-size: 2.5rem;
     }
-.end-header-container {
+    .end-header-container {
     order:3;
     margin-right: 5%;
-}
-.showNavbar {
+    }
+    .showNavbar {
     display: none;
-}
-.projects h3 {
+    }
+    .projects h3 {
     font-size:1.1rem;
     }
-#mode-checkbox {
+    #mode-checkbox {
     width: 50px;
-}
-
+    }
+    .contact h3 {
+    font-size: 1.2em;
+    }
 }
 @media (min-width:1500px) { 
     .intro img {
