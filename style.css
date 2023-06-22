@@ -4,8 +4,7 @@
     box-sizing: border-box;
     text-align: center;
     text-decoration: none;
-   /* color:white;*/
-    
+
 }
 button,a {
     color:rgb(255, 255, 255)
@@ -18,8 +17,6 @@ body {
     width: 100vw;
     font-family: 'IBM Plex Mono', monospace;
     color:white;
-  
-
 }
 body,html {
     overflow-x: hidden;
@@ -80,8 +77,6 @@ nav{
    top:110%;
    left:0%;
    height: 205px
- 
-
 }
 .show ul {
     display: flex;
@@ -172,7 +167,6 @@ label div {
 }
 
 .intro-img {
-   
     order: -1;
     width: 200px;
     overflow: hidden;
@@ -180,9 +174,9 @@ label div {
     background: url('../images/sunset.jpg');
     background-size: cover;
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
-    animation: blob 10s linear infinite;
+    animation: imgBlob 10s linear infinite;
 }
-@keyframes blob {
+@keyframes imgBlob {
     0%, 100% {
         border-radius:
             42% 56% 72% 28% / 42% 42% 56% 48%;
