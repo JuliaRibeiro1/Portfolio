@@ -16,7 +16,7 @@ Vi nesse projeto uma oportunidade de revisar meus conhecimentos:
 * Baixar o meu currículo.
 * Link que redireciona para o WhatsApp e email.
 * Barra de progresso que mostra a progressão do carregamento da página.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
