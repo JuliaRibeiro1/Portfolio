@@ -4,7 +4,7 @@
 🔗 https://julia-ribeiro.netlify.app/
 
 ## Aprendizados
-Vi nesse projeto uma oportunidade de revisar meus conhecimentos:
+Vi nesse projeto uma oportunidade de revisar meus conhecimentos em:
 * Grid.
 * Clip-path.
 * Animações.
@@ -20,7 +20,7 @@ Vi nesse projeto uma oportunidade de revisar meus conhecimentos:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## What I learned 
-In this project I had the opportunity to review my :
+In this project I had the opportunity to review what I've learned :
 * Grid.
 * Clip-path.
 * Animations.
