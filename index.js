@@ -23,6 +23,12 @@ get("#mode-checkbox").addEventListener("change",() => {
     get(".intro-section").classList.toggle("section-dark-mode")
     get("body").classList.toggle("body-dark-mode")
     get(".contact-section").classList.toggle("section-dark-mode")
+    get(".footer-container").classList.toggle("footer-dark-mode")
+    get("header").classList.toggle("nav-dark-mode")
+    get(".linkedin").classList.toggle("linkedin-dark-mode")
+    get(".github").classList.toggle("github-dark-mode")
+
+
   
 })
 
