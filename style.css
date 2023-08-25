@@ -40,9 +40,11 @@ button {
     border: 0;
     font-family: 'IBM Plex Mono', monospace;
 }
+.shadow {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.171);
+}
 header {
     background-color:#232838f6;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.226);
     padding: 2em;
     height:3%;
     width: 100%;
@@ -102,7 +104,6 @@ main {
 }
 .progress-bar {
     height: .5em;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.459);
     background-color: #6a9af1;
     z-index: 6;
     top:55px;
@@ -111,11 +112,20 @@ main {
 #menu-checkbox,#mode-checkbox {
     display: none;
   }
-
+.mode-checkbox-container {
+ 
+    width: 100px;
+    padding: .2em;
+    border-radius: 2em;
+  
+    box-shadow: 3px 3px 10px #14141488 inset;
+}
 #mode-checkbox {
     content: url(images/icons8-sun-48.png);
     display: block;
+    padding: 0;
     width: 35px;
+    transition: 1s ease-out;
     -webkit-appearance: none; 
 }
 .github {
@@ -138,12 +148,10 @@ label div {
 
 
 .github,.linkedin {
-   
     width: 50px;
     height: 50px;
     background-size: 50px;
 }
-
 
 #menu-checkbox:checked + label div:first-child {
     top:5px;
@@ -185,9 +193,9 @@ label div {
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
     background: url('../images/sunset.jpg');
     background-size: cover;
-    box-shadow: 0 0 15px 20px rgba(0, 0, 0, 0.137);
     animation: imgBlob 20s linear infinite;
 }
+
 @keyframes imgBlob {
     0%, 100% {
         border-radius:
@@ -216,7 +224,6 @@ label div {
 .intro p {
     max-width: 800px;
     font-size: 1.2rem;
-   
 }
 
 .social-medias-container {
@@ -241,7 +248,6 @@ span {
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 1em;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
 
 }
 .hireMeBtn:hover {
@@ -250,17 +256,10 @@ span {
 }
 
 #mode-checkbox:checked {
-    animation: spin .5s ease-out ;
+    transform: translate(60px);
     content: url(images/icons8-moon-48.png);
-   
-  
 }
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-        transition: .3s ease-in;
-    }
-}
+
 .projects {
    display: flex;
    flex-direction: column;
@@ -446,9 +445,6 @@ footer {
     .projects h3 {
     font-size:1.1rem;
     }
-    #mode-checkbox {
-    width: 50px;
-    }
     .contact h3 {
     font-size: 1.2em;
     }
@@ -468,34 +464,29 @@ footer {
     }
 }
 
-.github-dark-mode {
+.github-light-mode {
    background-image: url(images/icon-github-black.png);
  
 }
-.linkedin-dark-mode {
+.linkedin-light-mode {
     background-image:url(images/icon-linkedin-black.png) ;
   
 }
-.nav-dark-mode ul {
-     background-color: #f2f4fc;
 
-}
-.nav-dark-mode li a {
+.nav-light-mode li a {
     color:#242a3b
 }
-.nav-dark-mode label div {
+.nav-light-mode label div {
    background-color: #1f2433;
 }
-.section-dark-mode {
-    background-color:#f2f4fc ;
+
+.nav-light-mode,.nav-light-mode ul,.section-light-mode {
+    background-color:#fdfeff;
 }
-.nav-dark-mode {
-    background-color:#f1f4faf1;
-}
-.body-dark-mode {
-    background-color:#ebeef5f1;
+.body-light-mode {
+    background-color:#f3f6fd;
     color:#242a3b 
 }
-.footer-dark-mode {
+.footer-light-mode {
     color:white
 }
